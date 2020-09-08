@@ -20,9 +20,7 @@ export class CategoriasController {
 
   @Post()
   @UsePipes(ValidationPipe)
-  async criarCategoria (
-    @Body() categoria: CriarCategoriaDto
-  ): Promise<ICategoria> {
+  async criarCategoria (@Body() categoria: CriarCategoriaDto): Promise<ICategoria> {
     return await this.categoriasService.criarCategoria(categoria)
   }
 
